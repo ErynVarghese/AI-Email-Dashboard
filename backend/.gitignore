@@ -1,1 +1,2 @@
 .env
+/email_ai/ai/spam_detection/data/spam.csv
