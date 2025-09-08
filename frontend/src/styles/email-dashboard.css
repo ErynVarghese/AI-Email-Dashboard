@@ -1,0 +1,181 @@
+:root {
+  --bg: #0b0c10;
+  --card: #15161b;
+  --ink: #e6e6e6;
+  --muted: #9aa1ac;
+  --accent: #5b9cff;
+  --danger: #f05454;
+  --outline: #2a2d34;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.page {
+  padding: 16px;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* ───────────── Top Bar ───────────── */
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0 16px;
+  border-bottom: 1px solid var(--outline);
+  margin-bottom: 16px;
+}
+
+.topbar h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+/* ───────────── Grid Item ───────────── */
+.grid-stack-item-content {
+  height: 100%;
+  background: var(--card);
+  border: 1px solid var(--outline);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* ───────────── Widget ───────────── */
+.widget {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.widget-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--outline);
+  cursor: move;
+  user-select: none;
+}
+
+.widget-title {
+  font-size: 14px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.widget-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.widget-body {
+  padding: 12px;
+  overflow: auto;
+}
+
+/* ───────────── Table ───────────── */
+.table-wrap {
+  max-height: 100%;
+  overflow: auto;
+}
+
+table.tbl {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+table.tbl th,
+table.tbl td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--outline);
+  text-align: left;
+  vertical-align: top;
+}
+
+table.tbl thead th {
+  position: sticky;
+  top: 0;
+  background: #14161c;
+  z-index: 1;
+}
+
+.subject {
+  font-weight: 600;
+}
+
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+/* ───────────── Buttons / Chips ───────────── */
+.btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 6px 10px;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--outline);
+}
+
+.btn-danger {
+  background: var(--danger);
+}
+
+.btn-small {
+  padding: 6px 8px;
+  font-size: 12px;
+}
+
+/* ───────────── Chips ───────────── */
+.chip {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-weight: 700;
+  font-size: 12px;
+  background: #0f1116;
+  border: 1px solid var(--outline);
+}
+
+.chip.high {
+  background: #2a1014;
+  border-color: #7a1e2a;
+}
+
+.chip.med {
+  background: #172033;
+  border-color: #1f3d77;
+}
+
+.chip.low {
+  background: #0f1116;
+  border-color: #333;
+}
+
+/* ───────────── Toggle Label ───────────── */
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--muted);
+}

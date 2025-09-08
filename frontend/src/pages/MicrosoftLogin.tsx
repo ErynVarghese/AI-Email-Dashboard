@@ -1,37 +1,18 @@
-import React, { useEffect } from 'react';
+import React from "react";
 
-const MicrosoftLogin = () => {
-  
-  useEffect(() => {
-    // Check login status by calling a simple backend endpoint
-    fetch('http://localhost:8000/api/emails/', {
-      credentials: 'include' // VERY IMPORTANT for session-based auth
-    })
-      .then(res => {
-        if (res.status === 200) {
-          // Already signed in — redirect to email view
-          window.location.href = '/emails'; // or whatever page/component you want
-        }
+const API = "http://localhost:8000/api";
 
-        
-      })
-      .catch(err => {
-        console.log('User not signed in yet.');
-      });
-  }, []);
-
+export default function MicrosoftLogin() {
   const handleLogin = () => {
-    window.location.href = 'http://localhost:8000/api/auth/login';
+    window.location.href = `${API}/auth/login`;
   };
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '100px' }}>
+    <div style={{ textAlign: "center", marginTop: 100 }}>
       <h2>Sign in with Microsoft</h2>
-      <button onClick={handleLogin} style={{ padding: '10px 20px', fontSize: '16px' }}>
+      <button onClick={handleLogin} style={{ padding: "10px 20px", fontSize: 16 }}>
         Sign In
       </button>
     </div>
   );
-};
-
-export default MicrosoftLogin;
+}
