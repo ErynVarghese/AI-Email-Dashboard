@@ -159,6 +159,5 @@ function WidgetFrame({ title, right, children }:{
   );
 }
 
-// stubs; wire to backend mutations later
 function openOutlook(id: string) { console.log("openOutlook", id); }
 async function markNotSpam(id: string) { console.log("markNotSpam", id); }

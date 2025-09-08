@@ -60,7 +60,7 @@ model.fit(
     verbose=1
 )
 
-# ---- SAVE ARTIFACTS (only new part you need) ----
+# ---- SAVE ARTIFACTS ----
 TOKENIZER_NAME = "tokenizer_spam.pkl"
 MODEL_NAME     = "model_spam.keras"
 
