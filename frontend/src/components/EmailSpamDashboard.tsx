@@ -1,8 +1,6 @@
-import React, { useEffect, useRef, useState, useCallback } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import { GridStack } from "gridstack";
-import "gridstack/dist/gridstack.min.css";
-import "../styles/email-dashboard.css";
 
 const API = "http://localhost:8000";
 
