@@ -33,7 +33,7 @@ async def get_user_emails_raw(access_token: str, top: int = 50) -> Dict[str, Any
             "receivedDateTime": received_iso,                
             "isRead": getattr(m, "is_read", None),
             "webLink": getattr(m, "web_link", None),
-            "bodyPreview": getattr(m, "body_preview", None),  
+            "bodyPreview": getattr(getattr(m, "body", None), "content", None),
         })
 
   

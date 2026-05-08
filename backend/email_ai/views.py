@@ -99,6 +99,7 @@ def emails_recent(request):
             "receivedDateTime": m.get("receivedDateTime") or m.get("received_date_time"),
             "isRead": m.get("isRead") or m.get("is_read"),
             "webLink": m.get("webLink") or m.get("web_link"),
+            "bodyPreview": m.get("bodyPreview") or m.get("body_preview"),
             "label": s["label"],
             "score": round(float(s["score"]), 4),
         })
