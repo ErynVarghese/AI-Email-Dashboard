@@ -222,9 +222,6 @@ function WidgetFrame({ title, right, children }:{
   );
 }
 
-function openOutlook(email: EmailItem) { 
-  console.log("openOutlook", email); 
-}
 
 function markNotSpam(id: string, rows: EmailItem[], setRows: React.Dispatch<React.SetStateAction<EmailItem[]>>) { 
   // Remove the email from the UI immediately
